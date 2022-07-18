@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "179bd55d-6330-41eb-ada8-34121f3231a3",
+		"name": "MS-Comunincation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4020582"
+	},
+	"item": [
+		{
+			"name": "buytip",
+			"item": [
+				{
+					"name": "Comprar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigoPassagem\":1,\r\n    \"nroCartao\":123456,\r\n    \"codigoSeguranca\":12,\r\n    \"valorPassagem\":10000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bank",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nroCartao\": 123456,\r\n    \"codigoSeguranca\": 12,\r\n    \"valorCompra\": 100.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/bank/pagamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"bank",
+								"pagamento"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "buyfeedback",
+			"item": [
+				{
+					"name": "Find By Chave",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/status/f9c99794-678f-42e8-9c8d-2951d7ec495f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"status",
+								"f9c99794-678f-42e8-9c8d-2951d7ec495f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/feedBack",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"feedBack"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gateway",
+			"item": [
+				{
+					"name": "Comprar Gateway",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigoPassagem\":1,\r\n    \"nroCartao\":123456,\r\n    \"codigoSeguranca\":12,\r\n    \"valorPassagem\":10000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8099/comprar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"comprar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find By Chave",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/status/86819806-74e0-4e05-8230-8644a32a7eb9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"status",
+								"86819806-74e0-4e05-8230-8644a32a7eb9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8099/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8099",
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

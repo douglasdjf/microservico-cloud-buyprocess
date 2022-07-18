@@ -1,0 +1,21 @@
+server:
+  port: 0
+
+spring:
+  rabbitmq:
+    username: admin
+    password: admin
+
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: compra
+          group: buyprocess
+
+fila:
+  entrada: compras-aguardando
+  finalizado: compras-finalizado
+
+bank:
+  url: http://localhost:8081
